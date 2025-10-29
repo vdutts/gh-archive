@@ -1,0 +1,49 @@
+name: Backup Starred Repos
+
+on:
+  # Run daily at 2 AM UTC
+  schedule:
+    - cron: '0 2 * * *'
+  
+  # Allow manual trigger
+  workflow_dispatch:
+
+jobs:
+  backup:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      
+      - name: Run backup
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          GH_USER_ID: ${{ secrets.GH_USER_ID }}
+          GH_USERNAME: ${{ secrets.GH_USERNAME }}
+          R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
+          R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          R2_BUCKET_NAME: ${{ secrets.R2_BUCKET_NAME }}
+        run: |
+          python backup_starred_repos.py
+      
+      - name: Upload backup summary
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: backup-logs
+          path: |
+            *.log
+            manifest_*.json
+          retention-days: 7
