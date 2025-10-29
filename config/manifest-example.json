@@ -1,0 +1,81 @@
+{
+  "backup_info": {
+    "created_at": "2025-10-29T05:25:00.123456",
+    "github_username": "xxxx",
+    "total_repos": 150,
+    "backup_id": "backup_20251029_052500"
+  },
+  "starred_lists": {
+    "by_language": {
+      "JavaScript": ["20251029_a1b2c3d4_react", "20251029_e5f6g7h8_vue"],
+      "Python": ["20251029_i9j0k1l2_django", "20251029_m3n4o5p6_flask"],
+      "Go": ["20251029_q7r8s9t0_kubernetes", "20251029_u1v2w3x4_docker"],
+      "TypeScript": ["20251029_y5z6a7b8_nextjs"],
+      "Unknown": ["20251029_c9d0e1f2_awesome-list"]
+    },
+    "by_topic": {
+      "machine-learning": ["20251029_i9j0k1l2_tensorflow", "20251029_g3h4i5j6_pytorch"],
+      "web-development": ["20251029_a1b2c3d4_react", "20251029_y5z6a7b8_nextjs"],
+      "devops": ["20251029_q7r8s9t0_kubernetes", "20251029_u1v2w3x4_docker"],
+      "awesome": ["20251029_c9d0e1f2_awesome-list"]
+    }
+  },
+  "repositories": {
+    "20251029_a1b2c3d4_react": {
+      "original_name": "react",
+      "full_name": "facebook/react",
+      "unique_id": "20251029_a1b2c3d4_react",
+      "backup_status": "success",
+      "zip_filename": "20251029_a1b2c3d4_react.zip",
+      "metadata": {
+        "description": "The library for web and native user interfaces",
+        "homepage": "https://react.dev",
+        "language": "JavaScript",
+        "languages": {
+          "JavaScript": 95.2,
+          "TypeScript": 4.8
+        },
+        "topics": ["react", "javascript", "library", "ui", "web-development"],
+        "stars_count": 228000,
+        "forks_count": 46500,
+        "watchers_count": 6800,
+        "size": 15420,
+        "created_at": "2013-05-24T16:15:54Z",
+        "updated_at": "2025-10-29T12:00:00Z",
+        "pushed_at": "2025-10-29T11:45:30Z",
+        "clone_url": "https://github.com/facebook/react.git",
+        "ssh_url": "git@github.com:facebook/react.git",
+        "html_url": "https://github.com/facebook/react",
+        "license": "MIT",
+        "is_fork": false,
+        "is_archived": false,
+        "is_private": false,
+        "default_branch": "main"
+      },
+      "owner": {
+        "login": "facebook",
+        "type": "Organization",
+        "html_url": "https://github.com/facebook"
+      },
+      "contributors": [
+        {
+          "login": "gaearon",
+          "contributions": 1543,
+          "html_url": "https://github.com/gaearon"
+        },
+        {
+          "login": "sebmarkbage",
+          "contributions": 987,
+          "html_url": "https://github.com/sebmarkbage"
+        }
+      ],
+      "backed_up_at": "2025-10-29T05:25:15.789012"
+    }
+  },
+  "lookup": {
+    "react": "20251029_a1b2c3d4_react",
+    "facebook/react": "20251029_a1b2c3d4_react",
+    "django": "20251029_i9j0k1l2_django",
+    "django/django": "20251029_i9j0k1l2_django"
+  }
+}

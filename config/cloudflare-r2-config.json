@@ -1,0 +1,87 @@
+{
+  "cloudflare_r2_bucket_configuration": {
+    "bucket_info": {
+      "name": "gh-starred-backups",
+      "created_date": "Oct 29, 2025",
+      "location": "Western North America (WNAM)",
+      "s3_api_endpoint": "https://***.r2.cloudflarestorage.com/gh-starred-backups"
+    },
+    "access_configuration": {
+      "custom_domains": {
+        "enabled": false,
+        "description": "Expose the contents of this R2 bucket to the internet through a custom domain. Recommended for production use.",
+        "status": "There is no custom domain assigned to this bucket."
+      },
+      "public_development_url": {
+        "enabled": false,
+        "description": "Expose the contents of this R2 bucket to the internet through the Public Development URL when enabled.",
+        "status": "The public development URL is disabled for this bucket."
+      }
+    },
+    "advanced_features": {
+      "r2_data_catalog": {
+        "enabled": false,
+        "description": "Add an Apache Iceberg REST catalog, to allow query engines to manage and query Iceberg tables stored in R2.",
+        "status": "The R2 Data Catalog is disabled for this bucket."
+      },
+      "cors_policy": {
+        "enabled": false,
+        "description": "Configure CORS headers that R2 will set when accessing this bucket's contents from a browser.",
+        "status": "There is no CORS Policy defined for this bucket."
+      },
+      "event_notifications": {
+        "enabled": false,
+        "description": "Automatically trigger Workers and take action when data in your R2 bucket changes by using Cloudflare Queues.",
+        "requirements": "Using event notifications requires you to purchase a Workers Paid plan.",
+        "status": "Pay-as-you-go Workers Paid Plan required"
+      },
+      "on_demand_migration": {
+        "enabled": false,
+        "description": "Continuously migrate data from an Amazon S3 and Google Cloud bucket to this bucket only as read requests are made.",
+        "status": "On Demand Migration is not enabled for this bucket."
+      }
+    },
+    "lifecycle_management": {
+      "object_lifecycle_rules": {
+        "description": "Specify rules to automatically manage objects after a specified time.",
+        "rules": [
+          {
+            "rule_name": "Default Multipart Abort Rule",
+            "prefix": "--",
+            "actions": "Abort uploads after 7 day(s)",
+            "status": "Active"
+          }
+        ]
+      },
+      "bucket_lock_rules": {
+        "enabled": false,
+        "description": "Set a retention policy to prevent object overwrites and deletions until the specified period ends.",
+        "status": "There are no bucket lock rules defined for this bucket."
+      },
+      "default_storage_class": {
+        "class": "Standard",
+        "description": "Specify which storage class new objects will automatically be placed in."
+      }
+    },
+    "api_credentials": {
+      "account_id": "***",
+      "s3_api_endpoint": "https://***.r2.cloudflarestorage.com",
+      "account_api_token": "***",
+      "access_key_id": "***",
+      "secret_access_key": "***",
+      "endpoints": {
+        "default": "https://***.r2.cloudflarestorage.com",
+        "eu": "https://***.eu.r2.cloudflarestorage.com"
+      }
+    },
+    "usage_notes": {
+      "free_tier_limits": {
+        "storage": "10GB",
+        "class_a_operations": "1M per month",
+        "class_b_operations": "10M per month"
+      },
+      "s3_compatibility": "Fully S3-compatible API",
+      "recommended_for": "Production backup storage with high durability"
+    }
+  }
+}

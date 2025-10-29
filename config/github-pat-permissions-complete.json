@@ -1,0 +1,183 @@
+{
+  "github_personal_access_token_permissions": {
+    "legend": {
+      "🟢": "REQUIRED - Essential for the backup script to work",
+      "🔴": "NOT NEEDED - Skip entirely for security"
+    },
+    "account_permissions": [
+      {
+        "field": "Block another user",
+        "description": "View and manage users blocked by the user.",
+        "option_selected": "NO ACCESS",
+        "permission_level": "None",
+        "status_emoji": "🔴",
+        "justification": "Not needed for backup script - we only need to read starred repositories, not manage user blocking"
+      },
+      {
+        "field": "Codespaces user secrets",
+        "description": "Manage Codespaces user secrets.",
+        "option_selected": "NO ACCESS",
+        "permission_level": "None",
+        "status_emoji": "🔴",
+        "justification": "Not needed for backup script - we don't use GitHub Codespaces functionality"
+      },
+      {
+        "field": "Copilot Chat",
+        "description": "This application will receive your GitHub ID, your GitHub Copilot Chat session messages (not including messages sent to another application), and timestamps of provided GitHub Copilot Chat session messages. This permission must be enabled for Copilot Extensions.",
+        "option_selected": "NO ACCESS",
+        "permission_level": "None",
+        "status_emoji": "🔴",
+        "justification": "Not needed for backup script - we don't interact with Copilot Chat functionality"
+      },
+      {
+        "field": "Copilot Editor Context",
+        "description": "This application will receive bits of Editor Context (e.g. currently opened file) whenever you send it a message through Copilot Chat.",
+        "option_selected": "NO ACCESS",
+        "permission_level": "None",
+        "status_emoji": "🔴",
+        "justification": "Not needed for backup script - we don't use Copilot Editor Context"
+      },
+      {
+        "field": "Copilot Requests",
+        "description": "Send Copilot requests.",
+        "option_selected": "NO ACCESS",
+        "permission_level": "None",
+        "status_emoji": "🔴",
+        "justification": "Not needed for backup script - we don't send Copilot requests"
+      },
+      {
+        "field": "Email addresses",
+        "description": "Manage a user's email addresses.",
+        "option_selected": "NO ACCESS",
+        "permission_level": "None",
+        "status_emoji": "🔴",
+        "justification": "Not needed for backup script - we only need repository data, not user email information"
+      },
+      {
+        "field": "Events",
+        "description": "View events triggered by a user's activity.",
+        "option_selected": "NO ACCESS",
+        "permission_level": "None",
+        "status_emoji": "🔴",
+        "justification": "Not needed for backup script - we don't need to track user activity events"
+      },
+      {
+        "field": "Followers",
+        "description": "A user's followers",
+        "option_selected": "NO ACCESS",
+        "permission_level": "None",
+        "status_emoji": "🔴",
+        "justification": "Not needed for backup script - we only need starred repositories, not follower information"
+      },
+      {
+        "field": "GPG keys",
+        "description": "View and manage a user's GPG keys.",
+        "option_selected": "NO ACCESS",
+        "permission_level": "None",
+        "status_emoji": "🔴",
+        "justification": "Not needed for backup script - we don't need to access or manage GPG keys"
+      },
+      {
+        "field": "Gists",
+        "description": "Create and modify a user's gists and comments.",
+        "option_selected": "NO ACCESS",
+        "permission_level": "None",
+        "status_emoji": "🔴",
+        "justification": "Not needed for backup script - we're backing up repositories, not gists"
+      },
+      {
+        "field": "Git SSH keys",
+        "description": "Git SSH keys",
+        "option_selected": "NO ACCESS",
+        "permission_level": "None",
+        "status_emoji": "🔴",
+        "justification": "Not needed for backup script - we use HTTPS cloning, not SSH keys"
+      },
+      {
+        "field": "Interaction limits",
+        "description": "Interaction limits on repositories",
+        "option_selected": "NO ACCESS",
+        "permission_level": "None",
+        "status_emoji": "🔴",
+        "justification": "Not needed for backup script - we don't need to manage repository interaction limits"
+      },
+      {
+        "field": "Knowledge bases",
+        "description": "View knowledge bases for a user.",
+        "option_selected": "NO ACCESS",
+        "permission_level": "None",
+        "status_emoji": "🔴",
+        "justification": "Not needed for backup script - we're backing up repositories, not knowledge bases"
+      },
+      {
+        "field": "Models",
+        "description": "Allows access to GitHub Models.",
+        "option_selected": "NO ACCESS",
+        "permission_level": "None",
+        "status_emoji": "🔴",
+        "justification": "Not needed for backup script - we don't use GitHub Models functionality"
+      },
+      {
+        "field": "Plan",
+        "description": "View a user's plan.",
+        "option_selected": "NO ACCESS",
+        "permission_level": "None",
+        "status_emoji": "🔴",
+        "justification": "Not needed for backup script - we don't need to access user plan information"
+      },
+      {
+        "field": "Private repository invitations",
+        "description": "View a user's invitations to private repositories",
+        "option_selected": "NO ACCESS",
+        "permission_level": "None",
+        "status_emoji": "🔴",
+        "justification": "Not needed for backup script - we're only backing up public starred repositories"
+      },
+      {
+        "field": "Profile",
+        "description": "Manage a user's profile settings.",
+        "option_selected": "NO ACCESS",
+        "permission_level": "None",
+        "status_emoji": "🔴",
+        "justification": "Not needed for backup script - we don't need to access or modify user profile settings"
+      },
+      {
+        "field": "SSH signing keys",
+        "description": "View and manage a user's SSH signing keys.",
+        "option_selected": "NO ACCESS",
+        "permission_level": "None",
+        "status_emoji": "🔴",
+        "justification": "Not needed for backup script - we don't need to access SSH signing keys"
+      },
+      {
+        "field": "Starring",
+        "description": "List and manage repositories a user is starring.",
+        "option_selected": "READ ONLY",
+        "permission_level": "Read",
+        "status_emoji": "🟢",
+        "justification": "CRITICAL - This is the core functionality needed to fetch target user's starred repositories list. Essential for the backup script to work."
+      },
+      {
+        "field": "Watching",
+        "description": "List and change repositories a user is subscribed to.",
+        "option_selected": "NO ACCESS",
+        "permission_level": "None",
+        "status_emoji": "🔴",
+        "justification": "Not needed for backup script - we need starred repositories, not watched repositories"
+      }
+    ],
+    "summary": {
+      "total_permissions": 20,
+      "required_permissions": 1,
+      "permissions_to_enable": [
+        {
+          "field": "Starring",
+          "level": "Read",
+          "category": "Account"
+        }
+      ],
+      "security_principle": "Minimum required permissions for maximum security - only enable Starring (Read) permission",
+      "note": "Repository access is controlled separately when creating the token - select 'Public repositories (read-only)'"
+    }
+  }
+}
