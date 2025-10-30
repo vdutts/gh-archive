@@ -27,7 +27,7 @@ python3 go.py
 
 1. **Add GitHub Secrets** at `Settings → Secrets → Actions`:
    - `GH_TOKEN` - Your GitHub personal access token
-   - `GH_USER_ID` - Target user's GitHub ID (e.g., `***REMOVED***`)
+   - `GH_USER_ID` - Target user's GitHub ID
    - `GH_USERNAME` - Target user's username (optional fallback)
    - `R2_ACCOUNT_ID` - Cloudflare R2 account ID
    - `R2_ACCESS_KEY_ID` - R2 access key
