@@ -1,4 +1,4 @@
-# GitHub Starred Repos Backup
+# GitHub Starred Repos Backup ⭐️
 
 Auto-backup all starred repos from any GitHub account to Cloudflare R2.
 
