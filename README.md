@@ -67,15 +67,14 @@ Create token at [github.com/settings/tokens](https://github.com/settings/tokens)
 - `backup_starred_repos.py` - Main backup script
 - `go.py` - One-command setup + runner
 - `.github/workflows/backup.yml` - GitHub Actions workflow
-- `config/` - Configuration examples
-- `.env.example` - Environment variable template
+- `config/` - configuration examples
 
 ## Cost
 
 **$0/month** on GitHub Free tier:
 - GitHub Actions: 2,000 min/month (uses ~150 min/month for daily backups)
+   - *Public repos get unlimited Actions minutes*
 - Cloudflare R2: 10GB free storage
-- Public repos get unlimited Actions minutes
 
 ## License
 
